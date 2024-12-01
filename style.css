@@ -243,8 +243,8 @@ h4{
     
 }
 
-.habilidades span {
-    font-size: 12px; /* Tamaño más pequeño para el nivel */
-    color: #f1f1f1; /* Ajusta el color según tu diseño */
+.habilidades p {
+    font-size: 12px;
+    margin: 0;
 }
 

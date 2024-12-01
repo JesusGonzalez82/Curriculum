@@ -1,0 +1,84 @@
+@media print {
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        font-size: 9pt; /* Reducimos ligeramente el tamaño de la fuente */
+        line-height: 1.2; /* Compactamos las líneas */
+        -webkit-print-color-adjust: exact; /* Mantener colores */
+        overflow: hidden;
+    }
+    .container {
+        width: 100%;
+        height: 287mm; /* Ligeramente menos que A4 para evitar desbordes */
+        max-width: 200mm; /* Ajustamos el ancho ligeramente */
+        margin: 0;
+        padding: 5mm; /* Reducimos padding interno */
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Distribución uniforme */
+    }
+    .cabecera {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 3mm; /* Espaciado más ajustado */
+    }
+    .cabecera img {
+        max-width: 45mm; /* Imagen más pequeña */
+        height: auto;
+        border-radius: 50%;
+    }
+    h1, h2 {
+        margin: 0;
+        text-align: center;
+    }
+    h1 {
+        font-size: 13pt; /* Ajuste final del título */
+    }
+    h2 {
+        font-size: 10pt;
+        color: #666;
+    }
+    h3 {
+        font-size: 9.5pt;
+        margin-top: 3mm;
+        margin-bottom: 2mm;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 2mm;
+    }
+    section {
+        margin-bottom: 4mm; /* Compactamos el espaciado entre secciones */
+        page-break-inside: avoid; /* Evitamos cortes dentro de las secciones */
+    }
+    p, ul, li {
+        margin: 0;
+        padding: 0;
+    }
+    ul {
+        list-style: none; /* Eliminamos viñetas */
+        padding: 0;
+    }
+    ul li {
+        margin-bottom: 2mm; /* Compactamos las listas */
+    }
+    hr {
+        border: 0;
+        border-top: 1px solid #ddd;
+        margin: 2mm 0; /* Márgenes reducidos */
+    }
+    /* Ajuste global de escalado */
+    @page {
+        size: A4; /* Tamaño exacto de A4 */
+        margin: 0; /* Sin márgenes */
+    }
+    html, body {
+        width: 210mm;
+        height: 297mm;
+        overflow: hidden;
+    }
+    .container {
+        transform: scale(0.98); /* Ajuste de escala final */
+        transform-origin: top left; /* Alineación de la escala */
+    }
+}
