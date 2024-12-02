@@ -2,83 +2,85 @@
     body {
         margin: 0;
         font-family: Arial, sans-serif;
-        font-size: 9pt; /* Reducimos ligeramente el tamaño de la fuente */
-        line-height: 1.2; /* Compactamos las líneas */
-        -webkit-print-color-adjust: exact; /* Mantener colores */
+        font-size: 10pt;
+        line-height: 1.4;
+        -webkit-print-color-adjust: exact; /* Garantiza colores en impresión */
         overflow: hidden;
     }
     .container {
         width: 100%;
-        height: 287mm; /* Ligeramente menos que A4 para evitar desbordes */
-        max-width: 200mm; /* Ajustamos el ancho ligeramente */
-        margin: 0;
-        padding: 5mm; /* Reducimos padding interno */
+        height: 297mm; /* Altura de A4 */
+        max-width: 210mm; /* Ancho de A4 */
+        margin: 0 auto;
+        padding: 10mm;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
-        justify-content: space-between; /* Distribución uniforme */
+        justify-content: space-between; /* Distribuir contenido */
+        overflow: hidden; /* Evitar desbordes */
     }
     .cabecera {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-bottom: 3mm; /* Espaciado más ajustado */
+        margin-bottom: 5mm;
     }
     .cabecera img {
-        max-width: 45mm; /* Imagen más pequeña */
+        max-width: 50mm; /* Imagen más pequeña */
         height: auto;
         border-radius: 50%;
     }
     h1, h2 {
         margin: 0;
+        padding: 0;
         text-align: center;
     }
     h1 {
-        font-size: 13pt; /* Ajuste final del título */
+        font-size: 14pt;
     }
     h2 {
-        font-size: 10pt;
+        font-size: 12pt;
         color: #666;
     }
     h3 {
-        font-size: 9.5pt;
-        margin-top: 3mm;
-        margin-bottom: 2mm;
+        font-size: 11pt;
+        margin-top: 5mm;
+        margin-bottom: 3mm;
         border-bottom: 1px solid #ddd;
         padding-bottom: 2mm;
     }
     section {
-        margin-bottom: 4mm; /* Compactamos el espaciado entre secciones */
-        page-break-inside: avoid; /* Evitamos cortes dentro de las secciones */
+        margin-bottom: 5mm; /* Espaciado compacto entre secciones */
+        page-break-inside: avoid; /* Evitar cortes */
     }
     p, ul, li {
         margin: 0;
         padding: 0;
     }
     ul {
-        list-style: none; /* Eliminamos viñetas */
+        list-style: none;
         padding: 0;
     }
     ul li {
-        margin-bottom: 2mm; /* Compactamos las listas */
+        margin-bottom: 3mm;
     }
     hr {
         border: 0;
         border-top: 1px solid #ddd;
-        margin: 2mm 0; /* Márgenes reducidos */
+        margin: 5mm 0;
     }
-    /* Ajuste global de escalado */
+    /* Forzar escalado automático para que todo encaje */
     @page {
-        size: A4; /* Tamaño exacto de A4 */
-        margin: 0; /* Sin márgenes */
+        size: A4; /* Establece tamaño A4 */
+        margin: 0;
     }
     html, body {
         width: 210mm;
         height: 297mm;
-        overflow: hidden;
+        overflow: hidden; /* Evita desbordes */
     }
     .container {
-        transform: scale(0.98); /* Ajuste de escala final */
-        transform-origin: top left; /* Alineación de la escala */
+        transform: scale(0.95); /* Ajusta el contenido al 95% */
+        transform-origin: top left; /* Asegura que se alinee bien */
     }
 }
